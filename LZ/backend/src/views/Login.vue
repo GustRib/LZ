@@ -1,12 +1,7 @@
 <template>
-    <div class="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-        <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-            <h2 class="mt-10 text-center text-3xl font-bold leading-9 tracking-tight text-black-500">Entre na sua conta
-            </h2>
-        </div>
+    <GuestLayout title="Entre na sua conta" @submit="login">
 
         <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form class="space-y-6" action="#" method="POST">
                 <div>
                     <label for="email" class="block text-sm font-medium leading-6 text-gray-900">E-mail</label>
                     <div class="mt-2">
@@ -26,27 +21,27 @@
                 </div>
                 <div class="flex items-center justify-between">
                     <div class="mt-2">
-                        <input type="checkbox" value="lsRememberMe" id="rememberMe"
-                        class="rounded-md"> 
-                        <label for="rememberMe" class="mx-2 text-sm font-medium leading-6 text-gray-900">Mantenha Conectado</label>
+                        <input type="checkbox" value="lsRememberMe" id="rememberMe" class="rounded-md">
+                        <label for="rememberMe" class="mx-2 text-sm font-medium leading-6 text-gray-900">Mantenha
+                            Conectado</label>
                     </div>
 
                     <div class="text-sm">
-                        <a href="/request-password" class="font-semibold text-indigo-600 hover:text-indigo-500">Esqueceu sua senha?</a>
+                        <a href="/RequestPassword" class="font-semibold text-indigo-600 hover:text-indigo-500">Esqueceu sua
+                            senha?</a>
                     </div>
                 </div>
 
                 <div>
                     <button type="submit"
                         class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Entrar
-                        </button>
+                    </button>
                 </div>
-            </form>
 
         </div>
-    </div>
+    </GuestLayout>
 </template>
 
-<style scoped>
-
-</style>
+<script setup>
+import GuestLayout from '../components/GuestLayout.vue';
+</script>
